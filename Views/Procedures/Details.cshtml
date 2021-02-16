@@ -1,0 +1,41 @@
+﻿@model am108217MIS4200.Models.Procedure
+
+@{
+    ViewBag.Title = "Procedure Details";
+}
+
+<h2>Procedure Details</h2>
+
+<div>
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.procedureType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.procedureType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.procedureDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.procedureDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.procedureCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.procedureCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.procedureID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

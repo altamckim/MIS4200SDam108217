@@ -1,0 +1,47 @@
+﻿@model am108217MIS4200.Models.Procedure
+
+@{
+    ViewBag.Title = "Delete Procedure";
+}
+
+<h2>Delete a Procedure</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.procedureType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.procedureType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.procedureDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.procedureDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.procedureCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.procedureCost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

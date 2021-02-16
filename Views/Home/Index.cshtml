@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Alta McKim's Class Page</h1>
+    <p class="lead">
+        This website is a full insight into Alta McKim's University learning and personal insights.</p>
+    <p><a href="https://ohiocoblms.azurewebsites.net/learn/forum.aspx" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>My Links</h2>
+        <p>
+            <ul>
+                <li>@Html.ActionLink("Owners", "Index", "Owners")</li>
+                <li>@Html.ActionLink("Pets", "Index", "Pets")</li>
+                <li>@Html.ActionLink("Vets", "Index", "Vets")</li>
+                <li>@Html.ActionLink("Procedures", "Index", "Procedures")</li>
+
+            </ul>
+        </p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Involvement</h2>
+        <p>I am currently involved in a multitude of organizations.This includes the honors business program (Copeland Scholars), Information Systems and Analytics Professionals, and Sigma Kappa Soroity. 
+        Through these organizations I have made life-long friends and relationships, while also growing personally and professionally. Sigma Kappa also allowed my to hold a position on the executive board (2019-2020) as the VP of Finance and now I am currently the Triangle Correspondant. Without these organizations, my college experience and development would have been greatly hindered and I am grateful to these organizations.</p>
+        <p><a class="btn btn-default" href="http://ohio.sigmakappa.org/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Checkout Court Street Coffee</h2>
+        <p>Court Street Coffee is my favorite local coffee shop in Athens, OH. 
+        It can be found right on court street next to the college of business and across from College Green. I highly suggest trying a chai tea latte or a refreshing green tea to perk you up and start your day.</p>
+        <p><a class="btn btn-default" href="https://www.courtstreetcoffee.com/">Learn more &raquo;</a></p>
+    </div>
+</div>

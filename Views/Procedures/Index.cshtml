@@ -1,0 +1,45 @@
+﻿@model IEnumerable<am108217MIS4200.Models.Procedure>
+
+@{
+    ViewBag.Title = "Procedure List";
+}
+
+<h2>Procedure List</h2>
+
+<p>
+    @Html.ActionLink("Create a New Procedure", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Type of Procedure
+        </th>
+        <th>
+            Date of Procedure
+        </th>
+        <th>
+            Procedure Cost
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.procedureType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.procedureDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.procedureCost)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.procedureID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.procedureID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.procedureID })
+        </td>
+    </tr>
+}
+
+</table>

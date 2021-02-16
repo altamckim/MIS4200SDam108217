@@ -1,0 +1,63 @@
+﻿@model IEnumerable<am108217MIS4200.Models.Vet>
+
+@{
+    ViewBag.Title = "Vet List";
+}
+
+<h2>Vet List</h2>
+
+<p>
+    @Html.ActionLink("Create a New Vet", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Owner Name
+        </th>
+        <th>
+            Vet First Name
+        </th>
+        <th>
+            Vet Last Name
+        </th>
+        <th>
+            Vet Address
+        </th>
+        <th>
+            Vet Email
+        </th>
+        <th>
+            Vet Phone Number
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner.fullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vetFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vetLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vetEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vetPhone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.vetID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.vetID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.vetID })
+        </td>
+    </tr>
+}
+
+</table>
